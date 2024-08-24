@@ -1,9 +1,12 @@
+import Container from "../components/shared/Container";
 
 
 export default function Home() {
   return (
-    <main className="max-w-screen-xl px-10 mx-auto flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="min-h-screen">
+      <Container>
       Hello Car Doctor Pro
+      </Container>
     </main>
   );
 }
