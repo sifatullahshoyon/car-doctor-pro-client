@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 z-50 w-full">
       <Container>
-        <nav className="h-24 pt-10 flex items-center justify-between bg-white px-4 py-2 text-black mb-24">
+        <nav className="h-24 pt-10 flex items-center justify-between bg-white px-4 pb-5 text-black mb-24">
           {/* logo */}
           <div className="scale-100 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold text-black transition-all duration-200 hover:scale-110">
             <Link href="/">

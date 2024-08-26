@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="lg:h-[477px] bg-secondary-color">
       <Container>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2 justify-between pt-32">
-          <div class="lg:col-span-2">
+          <div className="lg:col-span-2">
             <Link href="/">
               <Image src={logo} alt="logo" />
             </Link>
