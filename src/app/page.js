@@ -1,5 +1,6 @@
-import About from "../components/About";
-import Banner from "../components/Banner";
+import About from "../components/Homepage/About";
+import Banner from "../components/Homepage/Banner";
+import ServicesArea from "../components/Homepage/ServicesArea";
 import Container from "../components/shared/Container";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Container>
         <Banner />
         <About />
+        <ServicesArea />
       </Container>
     </main>
   );

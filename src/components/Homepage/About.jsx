@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import personImg from "@/public/assets/images/about_us/person.jpg";
 import partsImg from "@/public/assets/images/about_us/parts.jpg";
-import PrimaryBtn from "./shared/Buttons/PrimaryBtn";
+import PrimaryBtn from "../shared/Buttons/PrimaryBtn";
 
 const About = () => {
   return (
@@ -17,6 +17,7 @@ const About = () => {
             width={460}
             height={473}
             loading="lazy"
+            placeholder="blur"
           />
           <Image
             src={partsImg}
@@ -25,6 +26,7 @@ const About = () => {
             height={332}
             className="absolute lg:top-1/4 lg:right-9 sm:top-1/2 border-[10px] border-white rounded-lg"
             loading="lazy"
+            placeholder="blur"
           />
         </div>
         {/* Content */}

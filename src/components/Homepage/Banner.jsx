@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
-import PrimaryBtn from "./shared/Buttons/PrimaryBtn";
+import PrimaryBtn from "../shared/Buttons/PrimaryBtn";
+
 
 const Banner = () => {
   const [currentSlider, setCurrentSlider] = useState(0);
