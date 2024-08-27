@@ -29,7 +29,7 @@ const login = () => {
   return (
     <section className="my-32">
       <Container>
-        <div className="flex md:flex-row flex-col flex-wrap gap-5 justify-center ">
+        <div className="flex md:flex-row flex-col flex-wrap gap-5 justify-center items-center">
           {/* Image */}
           <div>
             <Image
@@ -51,7 +51,7 @@ const login = () => {
                   htmlFor="email"
                   className="block text-dark-two-color text-lg font-semibold"
                 >
-                  Username
+                  Email
                 </label>
                 <input
                   className="flex h-10 w-full rounded-md border px-3 py-2 text-base placeholder:text-[#A2A2A2] font-normal focus:ring-1 focus-visible:outline-primary-color "
