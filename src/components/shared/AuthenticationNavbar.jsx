@@ -2,14 +2,11 @@
 import { useState, useRef, useEffect } from "react";
 import Container from "./Container";
 import Image from "next/image";
-import logo from "../../../public/assets/logo.svg";
-import { MdOutlineShoppingBag } from "react-icons/md";
-import { IoIosSearch } from "react-icons/io";
-import BtnOutline from "./Buttons/BtnOutline";
+import logo from "@/public/assets/logo.svg"
 import Link from "next/link";
 
-const Navbar = () => {
-  const [dropDownState, setDropDownState] = useState(false);
+const AuthenticationNavbar = () => {
+    const [dropDownState, setDropDownState] = useState(false);
   const dropDownMenuRef = useRef();
 
   useEffect(() => {
@@ -25,8 +22,8 @@ const Navbar = () => {
       document.removeEventListener("mousedown", closeDropDown);
     };
   }, []);
-  return (
-    <div className="sticky top-0 z-50 w-full">
+    return (
+        <div className="sticky top-0 z-50 w-full">
       <Container>
         <nav className="h-24 pt-10 flex items-center justify-between bg-white px-4 pb-5 text-black mb-24">
           {/* logo */}
@@ -38,32 +35,22 @@ const Navbar = () => {
           {/* Menu */}
           <ul className="hidden items-center justify-between gap-10 md:flex">
             <li className="group flex  cursor-pointer flex-col text-dark-two-color font-semibold text-lg">
-              Home
+            Order
               <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-primary-color transition-all duration-300 group-hover:w-full"></span>
             </li>
             <li className="group flex  cursor-pointer flex-col text-dark-two-color font-semibold text-lg">
-              About
+            Order Review
               <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-primary-color transition-all duration-300 group-hover:w-full"></span>
             </li>
             <li className="group flex  cursor-pointer flex-col text-dark-two-color font-semibold text-lg">
-              Services
+            Manage Inventory
               <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-primary-color transition-all duration-300 group-hover:w-full"></span>
             </li>
             <li className="group flex  cursor-pointer flex-col text-dark-two-color font-semibold text-lg">
-              Blog
-              <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-primary-color transition-all duration-300 group-hover:w-full"></span>
-            </li>
-            <li className="group flex  cursor-pointer flex-col text-dark-two-color font-semibold text-lg">
-              Contact
+            Login
               <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-primary-color transition-all duration-300 group-hover:w-full"></span>
             </li>
           </ul>
-          {/* Search Items */}
-          <div className="hidden items-center justify-between gap-10 md:flex">
-            <MdOutlineShoppingBag className="text-dark-two-color text-lg font-semibold" />
-            <IoIosSearch className="text-dark-two-color text-lg font-semibold" />
-            <BtnOutline>Appointment</BtnOutline>
-          </div>
           <div
             ref={dropDownMenuRef}
             onClick={() => setDropDownState(!dropDownState)}
@@ -90,30 +77,25 @@ const Navbar = () => {
               <div className="z-50  gap-2 bg-[#393E46]  absolute right-0 top-11 flex w-[200px] flex-col rounded-lg text-base">
                 <ul className="  ">
                   <li className="cursor-pointer  px-6 py-2 text-white rounded-t-lg hover:bg-sky-600 ">
-                    Home
+                  Order
                   </li>
                   <li className="cursor-pointer  px-6 py-2 text-white hover:bg-primary-color ">
-                    Services
+                  Order Review
                   </li>
                   <li className="cursor-pointer  px-6 py-2 text-white hover:bg-primary-color ">
-                    About
+                  Manage Inventory
                   </li>
                   <li className="cursor-pointer  px-6 py-2 text-white hover:bg-primary-color">
-                    Contact
+                  Login
                   </li>
                 </ul>
-                <div className="cursor-pointer  px-6 py-2 text-white flex flex-col space-y-4 ">
-                  <MdOutlineShoppingBag className="text-dark-two-color text-lg font-semibold" />
-                  <IoIosSearch className="text-dark-two-color text-lg font-semibold" />
-                  <BtnOutline>Appointment</BtnOutline>
-                </div>
               </div>
             )}
           </div>
         </nav>
       </Container>
     </div>
-  );
+    );
 };
 
-export default Navbar;
+export default AuthenticationNavbar;

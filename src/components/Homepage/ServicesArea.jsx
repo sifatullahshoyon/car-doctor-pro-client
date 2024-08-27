@@ -2,6 +2,7 @@ import React from "react";
 import SectionTitle from "../shared/SectionTitle";
 import { services } from "@/src/lib/services";
 import ServiceCard from "../Cards/ServiceCard";
+import BtnOutline from "../shared/Buttons/BtnOutline";
 
 const ServicesArea = () => {
   return (
@@ -18,6 +19,9 @@ const ServicesArea = () => {
         {services?.map((service) => (
           <ServiceCard key={service._id} service={service} />
         ))}
+      </div>
+      <div className="flex justify-center mt-12 ">
+        <BtnOutline className='mx-auto text-center'>More Services</BtnOutline>
       </div>
     </section>
   );
