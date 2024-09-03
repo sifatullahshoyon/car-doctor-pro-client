@@ -62,7 +62,7 @@ const Navbar = () => {
           <div className="hidden items-center justify-between gap-10 md:flex">
             <MdOutlineShoppingBag className="text-dark-two-color text-lg font-semibold" />
             <IoIosSearch className="text-dark-two-color text-lg font-semibold" />
-            <BtnOutline>Appointment</BtnOutline>
+            <Link href='/login'><BtnOutline>Appointment</BtnOutline></Link>
           </div>
           <div
             ref={dropDownMenuRef}

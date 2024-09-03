@@ -18,9 +18,33 @@ const signup = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    // console.log('Registration page data : 22:-' ,data);
+    const newUser = {
+      name : data.name,
+      email : data.email,
+      password : data.password
+    };
+    // console.log('Registration page newUser : 28:-' , newUser);
 
-  console.log(watch("example"));
+    try {
+      const response = await fetch('http://localhost:3000/api/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newUser),
+      });
+  
+      // const result = await response.json();
+      console.log(response);
+    } catch (error) {
+      console.error('Error submitting the form:', error);
+    }
+
+  };
+
+  // console.log(watch("example"));
 
   const handlerShowPassword = () => {
     return setShowPassword(!showPassword);
@@ -59,9 +83,9 @@ const signup = () => {
                   placeholder="Your Name"
                   name="name"
                   type="name"
-                  {...register("email", { required: true })}
+                  {...register("name", { required: true })}
                 />
-                {errors.email && (
+                {errors.name && (
                   <span className="text-red-600">This field is required</span>
                 )}
               </div>
