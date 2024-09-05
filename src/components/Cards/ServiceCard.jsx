@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
 const ServiceCard = ({ service }) => {
   const { _id, img, title, price } = service || {};
