@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import SectionTitle from "../shared/SectionTitle";
 import BtnOutline from "../shared/Buttons/BtnOutline";
-import { productsData } from '@/src/lib/products';
-import ProductsCard from '../Cards/ProductsCard';
+import { productsData } from "@/src/lib/products";
+import ProductsCard from "../Cards/ProductsCard";
 
 const Products = () => {
-    return (
-        <section className="my-32">
+  return (
+    <section className="my-32">
       <SectionTitle
         heading="Popular Products"
         title="Browse Our Products"
@@ -21,10 +21,10 @@ const Products = () => {
         ))}
       </div>
       <div className="flex justify-center mt-12 ">
-        <BtnOutline className='mx-auto text-center'>More Services</BtnOutline>
+        <BtnOutline className="mx-auto text-center">More Services</BtnOutline>
       </div>
     </section>
-    );
+  );
 };
 
 export default Products;

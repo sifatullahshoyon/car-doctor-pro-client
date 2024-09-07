@@ -15,6 +15,33 @@
   background-image: `linear-gradient(45deg, rgba(7, 25, 82, 0.7),  rgba(0, 0, 0, 0.3)), url(/assets/images/banner/${index+1}.jpg)`;
 } */
 
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  /* width: 100%; */
+  /* height: 100%; */
+  object-fit: cover;
+}
+
+.swiper-button-prev {
+  /* color: red; */
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -21,7 +21,7 @@ const ServicesArea = () => {
         ))}
       </div>
       <div className="flex justify-center mt-12 ">
-        <BtnOutline className='mx-auto text-center'>More Services</BtnOutline>
+        <BtnOutline className="mx-auto text-center">More Services</BtnOutline>
       </div>
     </section>
   );
